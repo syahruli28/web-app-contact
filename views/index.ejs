@@ -1,0 +1,17 @@
+    <h1>Hello World</h1>
+    <h2>Oy, <%= nama %></h2>
+
+    <h4>Daftar Mahasiswa</h4>
+    
+    <!-- if pada ejs -->
+    <% if (mahasiswa.length < 1) { %> <!-- hitung panjang isi mahasiswa, jika kurang dari 1 maka tampilkan -->
+        <p>Data Mahasiswa masih kosong.</p>
+    <% } else { %>
+        <!-- perulangan dengan ejs -->
+        <% mahasiswa.forEach(mhs => { %>
+            <ul>
+                <li><%= mhs.nama %> </li>
+                <li><%= mhs.email %> </li>
+            </ul>
+        <% }) %>
+    <% } %> 
